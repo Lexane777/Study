@@ -2,7 +2,8 @@ listArmstrong=[]
 listNumber=[0,1,2,3,4,5,6,7,8,9]
 for Num1 in listNumber:
     for Num2 in listNumber:
-        for Num3 in listNumber:
+        for Num3 in listNumber[1:]: #исключаем один 0, так как числа трехзначные и есть реверс первых разрядов
+            #Здесь, думаю, можно вынести Резалты и сразу проверять значения без деления по модулю
             if (((Num1**3)%10+(Num2**3)%10+(Num3**3)%10)%10==Num1):
                 result1=int(str(Num3)+str(Num2)+str(Num1))
                 result2=int(str(Num2)+str(Num3)+str(Num1))
